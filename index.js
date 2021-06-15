@@ -1,5 +1,12 @@
 // Create an Array of at least 3 losing messages
-
+const loseMessage = [
+    "You lost. Don't be upset. The stakes are pretty low here.",
+    "You didn't win. Try not to let this affect your self-worth.",
+    "Sorry for your loss... of this game.",
+    "You lost. I'm sure you're great at other things in life though.",
+    "I don't want to use the word LOSER here, so instead I'll call you a yet-to-be-winner.",
+    "Don't be discouraged because you lost. I once lost a game of basketball and that definitely didn't give me a complex."
+];
 // Create variables to count wins and losses
 
 // Create variables that target elements with the following IDs: 'message', 'wins', 'losses'

@@ -28,7 +28,7 @@ var boxNum = []
 
 for (var i = 0 ; i <boxes.length; i++) {
     boxes[i].addEventListener('click', function () {
-      boxNum.Number(this.textContent)
+      (parseInt(this.textContent))
     })
 }
 
@@ -37,11 +37,15 @@ for (var i = 0 ; i <boxes.length; i++) {
 // // create a random number between 1-3 and store it to a variable
 // // This number will represent the winning box
 
-var winningBox = function getRandomNum(min = 1, max = 3) {
+function getRandomNum(min = 1, max = 3) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max-min + 1) + min)
+    return Math.floor(Math.random() * (max - min + 1) + min)
 }
+
+var winningBox = getRandomNum(1,3)
+
+console.log(winningBox)
 
 // determine if the box clicked is equal to the random number
 // if the numbers match, display a winning message by changing the text content of the div#message element

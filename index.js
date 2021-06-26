@@ -32,16 +32,17 @@ function random_lose_msg () {
 
 for (var i = 0 ; i <boxes.length; i++) {
     boxes[i].addEventListener('click', function (e) {
+      winningBox = getRandomNum(1,3)
       boxNum = (parseInt(this.textContent))
       if (boxNum === winningBox) {
           message.textContent = "Congratulations, you've won!";
           numberOfWins++
-          wins.textContent = numberOfWins
+          wins.textContent = "Number of wins: " +  numberOfWins + " "
       } else {
           var lMessage= random_lose_msg()
           message.textContent = lMessage
           numberOfLosses++
-          losses.textContent = numberOfLosses
+          losses.textContent = "Number of losses: " + numberOfLosses
       }
     })
 }

@@ -65,3 +65,42 @@ p {
 #box-3 {
   background-color: #A5FF01;
 }
+
+.score {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#wins, #losses {
+  font-size: 1.4em;
+  color: #6003C3;
+  margin: 20px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .boxes {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  #message {
+    margin-bottom: 50px;
+  }
+  #wins, #losses {
+    font-size: 2em;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .boxes {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .boxes {
+    max-width: 75%;
+    margin: 0 auto;
+  ;
+}

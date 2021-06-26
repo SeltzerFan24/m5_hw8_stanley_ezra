@@ -24,15 +24,13 @@ var message = document.getElementById('message')
 
 var boxes = document.getElementsByClassName('box')
 
-var boxNum = []
+var boxNum = 0
 
 for (var i = 0 ; i <boxes.length; i++) {
-    boxes[i].addEventListener('click', function () {
-      (parseInt(this.textContent))
+    boxes[i].addEventListener('click', function (e) {
+      boxNum = (parseInt(this.textContent))
     })
 }
-
-console.log(boxNum)
 
 // // create a random number between 1-3 and store it to a variable
 // // This number will represent the winning box
@@ -54,13 +52,13 @@ var winningBox = getRandomNum(1,3)
 // if the numbers don't match, change the div#message element's text to a random losing message from the array above
 // if the numbers don't match, increment losses and display the loss count in div#losses
 
-// if (boxNum === winningBox) {
-//     message.textContent = "Congratulations, you've won!";
-//     numberOfWins++
-//     wins.textContent = numberOfWins
-// } else {
-//     function random_lose_msg (loseMessage) {
-//         return loseMessage[Math.floor(Math.random()*loseMessage.length)]
-//     }
-//     message.textContent = loseMessage
-// }
+if (boxNum === winningBox) {
+    message.textContent = "Congratulations, you've won!";
+    numberOfWins++
+    wins.textContent = numberOfWins
+} else {
+    function random_lose_msg (loseMessage) {
+        return loseMessage[Math.floor(Math.random()*loseMessage.length)]
+    }
+    message.textContent = loseMessage
+}

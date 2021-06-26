@@ -21,15 +21,37 @@ header {
 h1 {
   color: #FFFFFF;
   text-align: center;
+  font-size: 5rem;
+  font-weight: 300;
+  line-height: 1;
+  padding: 50px 0;
 }
 
 p {
   color:#6003C3;
   text-align: center;
+  margin: 20px 5%;
+  font-size: 2rem;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .box {
-  color:#6003C3
+  color:#6003C3;
+  width: 150px;
+  height: 150px;
+  border: 20px solid #6003C3;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  font-size: 5em;
+  text-align: center;
+  line-height: 150px;
+  box-shadow: 13px 13px 22px 1px rgb(0 0 0 / 36%);
 }
 
 #box-1 {
